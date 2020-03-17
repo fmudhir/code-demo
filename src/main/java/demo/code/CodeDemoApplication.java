@@ -1,4 +1,4 @@
-package demo.code.api.graphql.configuration;
+package demo.code;
 
 import demo.code.business.dto.BulletDto;
 import demo.code.business.dto.CompanyDto;
