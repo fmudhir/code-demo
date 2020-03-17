@@ -62,13 +62,13 @@ public class CodeDemoApplication extends SpringBootServletInitializer {
 
             List<TextDto> text = textService.getTextsByEntityId(company.get().getId());
 
-            BulletDto bullet1 = new BulletDto().setGroupId(text.get(0).getId()).setBullet("Reason 1");
+            BulletDto bullet1 = new BulletDto().setGroupId(text.get(0).getId()).setBullet("Warren Buffet");
             bulletService.saveTextBullet(bullet1);
 
-            BulletDto bullet2 = new BulletDto().setGroupId(text.get(0).getId()).setBullet("Reason 2");
+            BulletDto bullet2 = new BulletDto().setGroupId(text.get(0).getId()).setBullet("Old, stable and respected company");
             bulletService.saveTextBullet(bullet2);
 
-            BulletDto bullet3 = new BulletDto().setGroupId(text.get(0).getId()).setBullet("Reason 3");
+            BulletDto bullet3 = new BulletDto().setGroupId(text.get(0).getId()).setBullet(" Scale of a national company but headquartered in Omaha");
             bulletService.saveTextBullet(bullet3);
         };
     }
