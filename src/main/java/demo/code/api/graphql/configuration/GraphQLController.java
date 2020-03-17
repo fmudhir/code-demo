@@ -1,6 +1,6 @@
 package demo.code.api.graphql.configuration;
 
-import demo.code.api.graphql.graph.NoteQuery;
+import demo.code.api.graphql.graph.DocumentQuery;
 import graphql.ExecutionInput;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
@@ -25,11 +25,11 @@ public class GraphQLController {
     private final GraphQL graphQL;
 
     @Autowired
-    public GraphQLController(NoteQuery noteQuery) {
+    public GraphQLController(DocumentQuery documentQuery) {
 
         GraphQLSchema schema = new GraphQLSchemaGenerator()
                 .withBasePackages("demo.code")
-                .withOperationsFromSingletons(noteQuery)
+                .withOperationsFromSingletons(documentQuery)
                 .generate();
         graphQL = GraphQL.newGraphQL(schema).build();
     }
