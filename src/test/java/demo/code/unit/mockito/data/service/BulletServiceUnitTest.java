@@ -34,7 +34,8 @@ public class BulletServiceUnitTest {
                 .setBullet(BULLET)
                 .setGroupId(GROUP_ID);
 
-        Mockito.when(bulletService.getTextBulletsByGroupIds(Arrays.asList(GROUP_ID))) .thenReturn(Arrays.asList(bulletDto));
+        Mockito.when(bulletService.getTextBulletsByGroupIds(Arrays.asList(GROUP_ID)))
+                .thenReturn(Arrays.asList(bulletDto));
     }
 
     @Test
